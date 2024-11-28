@@ -16,11 +16,14 @@ type KanbanState = {
   setKanbanTasks: React.Dispatch<React.SetStateAction<KanbanTask[]>>;
   kanbanColumns: KanbanColumn[];
   setKanbanColumns: React.Dispatch<React.SetStateAction<KanbanColumn[]>>;
+  activeTask: string | null;
+  setActiveTask: React.Dispatch<React.SetStateAction<string | null>>;
 };
 
 const kanbanContext = createContext<KanbanState | undefined>(undefined);
 
 export const KanbanProvider = ({ children }: { children: React.ReactNode }) => {
+  const [activeTask, setActiveTask] = useState<string | null>(null);
   const [kanbanTasks, setKanbanTasks] = useState<KanbanTask[]>(() => {
     const tasks = localStorage.getItem("kanbanTasks");
     return tasks ? JSON.parse(tasks) : [];
@@ -43,7 +46,14 @@ export const KanbanProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <kanbanContext.Provider
-      value={{ kanbanTasks, setKanbanTasks, kanbanColumns, setKanbanColumns }}
+      value={{
+        activeTask,
+        setActiveTask,
+        kanbanTasks,
+        setKanbanTasks,
+        kanbanColumns,
+        setKanbanColumns,
+      }}
     >
       {children}
     </kanbanContext.Provider>

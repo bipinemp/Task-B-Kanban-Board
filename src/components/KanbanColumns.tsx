@@ -7,7 +7,13 @@ import KanbanColumnHeading from "./KanbanColumnHeading";
 import KanbanTask from "./KanbanTask";
 
 const KanbanColumns = () => {
-  const { kanbanTasks, kanbanColumns, setKanbanTasks } = useKanbanState();
+  const {
+    kanbanTasks,
+    kanbanColumns,
+    setKanbanTasks,
+    activeTask,
+    setActiveTask,
+  } = useKanbanState();
   const [showTaskForm, setShowTaskForm] = useState({
     column: "",
     show: false,
@@ -29,6 +35,8 @@ const KanbanColumns = () => {
           <KanbanColumnHeading column={column} index={index} />
 
           <KanbanTask
+            activeTask={activeTask}
+            setActiveTask={setActiveTask}
             column={column}
             kanbanTasks={kanbanTasks}
             setKanbanTasks={setKanbanTasks}
