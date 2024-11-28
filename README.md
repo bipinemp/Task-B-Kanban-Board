@@ -1,50 +1,71 @@
-# React + TypeScript + Vite
+# Kanban Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple Kanban board made with react and typescript for smooth drag and drop of tasks and creation of multiple columns. Smooth animations are powered by **@formkit/auto-animate** and icons powered by **lucide-react**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Add, delete, and update columns**: Users can create new columns delete existing column and update them as well.
+- **Add, delete, and sort tasks**: Tasks can be added to column, deleted and sorted up and down.
+- **Drag and drop tasks**: Tasks can be moved from one column to another with a drag-and-drop functionality.
+- **Smooth animations**: Smooth animations/transitions for task and column additions, deletions, and sorting.
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+Before you start, make sure you have the following installed:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the repository:**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/your-username/kanban-board.git
+
+   ```
+
+2. **Navigate into the project directory:**
+
+   ```bash
+   cd Task-B-Kanban-Board
+
+   ```
+
+3. **Install all dependencies:**
+
+   ```bash
+   npm install or yarn install
+
+   ```
+
+4. **Start the dev server:**
+   ```bash
+   npm run dev or yarn dev
+   ```
+
+## Known Limitations and Trade-offs
+
+### 1. Code is not well-tested
+
+The current code lacks unit and integration tests, which can lead to bugs which might not be seen while using. Adding test will allow to find bugs in development.
+
+### 2. Limited UI customization
+
+The UI is functional but basic. There are no advanced features like making templates, sytling, advanced options for tasks/columsn , searching and more.
+
+### 3. Time constraints
+
+Some features were simplified to meet deadlines, the more extra features can be added with more time. The limited features were made to accomplish a good/working product in limited time.
+
+## Future Improvements
+
+### 1. Testing
+
+Implementing unit and integrations tests to find bugs/issues in development.
+
+### 2. Better UI/UX
+
+Improve the design with more features, stylings, templates and more options.
