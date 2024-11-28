@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-bold text-[2rem];
+  }
+  h2 {
+    @apply font-bold text-[1.5rem];
+  }
+  h3 {
+    @apply text-[1.17rem];
+  }
+  ul {
+    @apply list-disc;
+  }
+}
+
+.column-scrollbar {
+  /* For Firefox */
+  scrollbar-width: 20px;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.2);
+}
+
+/* For WebKit-based browsers */
+.column-scrollbar::-webkit-scrollbar {
+  width: 20px;
+}
+
+.column-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.column-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
