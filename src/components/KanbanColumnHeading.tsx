@@ -76,7 +76,7 @@ const KanbanColumnHeading = memo(({ column, index }: Props) => {
           className="w-fit py-1 px-2 outline-none border-2 border-white rounded-md bg-transparent text-white"
         />
       ) : (
-        <h2 className="w-full pl-3 whitespace-nowrap">{column?.name}</h2>
+        <h2 className="w-full pl-3">{column?.name}</h2>
       )}
 
       <div className="flex items-center gap-x-2">

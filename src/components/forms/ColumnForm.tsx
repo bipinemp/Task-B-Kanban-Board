@@ -22,7 +22,7 @@ const ColumnForm = () => {
   return (
     <form
       onSubmit={handleColumnSubmit}
-      className="w-full mx-auto py-5 flex items-center justify-center gap-x-3 bg-black/30 z-10"
+      className="w-full mx-auto py-5 flex sm:flex-row flex-col items-center justify-center gap-3 bg-black/30 z-10"
     >
       <input
         value={column}

@@ -24,7 +24,7 @@ const KanbanColumns = () => {
       {kanbanColumns?.map((column, index) => (
         <div
           key={column.id}
-          className="max-w-full w-auto relative h-full bg-[#111304] p-3 text-white rounded-lg"
+          className="min-w-[400px] max-w-full w-auto relative h-full bg-[#111304] p-3 text-white rounded-lg"
         >
           <KanbanColumnHeading column={column} index={index} />
 
